@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ToDO List-->
+        <!--To do list-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TD_ToDoList" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,7 +43,7 @@
                             <constraint firstItem="uq3-tR-6LI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uSf-68-RUe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ToDO List" id="Fzp-ah-e0H">
+                    <navigationItem key="navigationItem" title="To do list" id="Fzp-ah-e0H">
                         <barButtonItem key="leftBarButtonItem" title="Reset" id="QP8-bI-tDy">
                             <connections>
                                 <action selector="resetButtonTapped:" destination="BYZ-38-t0r" id="LCr-gg-2ME"/>

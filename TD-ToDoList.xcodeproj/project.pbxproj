@@ -16,6 +16,7 @@
 		E05469732531C6AF00E7353C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E05469712531C6AF00E7353C /* LaunchScreen.storyboard */; };
 		E054697E2531C6AF00E7353C /* TD_ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E054697D2531C6AF00E7353C /* TD_ToDoListTests.swift */; };
 		E05469892531C6AF00E7353C /* TD_ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05469882531C6AF00E7353C /* TD_ToDoListUITests.swift */; };
+		E0851CE125321DF100305AEC /* ViewController + AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0851CE025321DF100305AEC /* ViewController + AlertController.swift */; };
 		E0EEC5A12531CA3700B491F0 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EEC5A02531CA3700B491F0 /* CoreDataHelper.swift */; };
 		E0FBD43F2531CCDA0035F77A /* MokeCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FBD43E2531CCDA0035F77A /* MokeCoreData.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		E05469842531C6AF00E7353C /* TD-ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TD-ToDoListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E05469882531C6AF00E7353C /* TD_ToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_ToDoListUITests.swift; sourceTree = "<group>"; };
 		E054698A2531C6AF00E7353C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0851CE025321DF100305AEC /* ViewController + AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + AlertController.swift"; sourceTree = "<group>"; };
 		E0EEC5A02531CA3700B491F0 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		E0FBD43E2531CCDA0035F77A /* MokeCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MokeCoreData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				E05469672531C6AE00E7353C /* ViewController.swift */,
+				E0851CE025321DF100305AEC /* ViewController + AlertController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				E054696E2531C6AE00E7353C /* TD_ToDoList.xcdatamodeld in Sources */,
 				E05469642531C6AE00E7353C /* AppDelegate.swift in Sources */,
 				E05469662531C6AE00E7353C /* SceneDelegate.swift in Sources */,
+				E0851CE125321DF100305AEC /* ViewController + AlertController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

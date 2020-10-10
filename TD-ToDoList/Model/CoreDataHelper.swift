@@ -10,7 +10,7 @@ import CoreData
 
 final class CoreDataHelper {
     
-    private let context: NSManagedObjectContext
+    let context: NSManagedObjectContext
     
     init(context: NSManagedObjectContext = AppDelegate().persistentContainer.viewContext) {
         self.context = context
