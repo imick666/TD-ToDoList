@@ -24,7 +24,7 @@ final class CoreDataHelper {
         newTask.title = title
         newTask.isDone = false
         
-        save()
+        saveContext()
     }
     
     // Read
@@ -39,7 +39,7 @@ final class CoreDataHelper {
     }
     
     // Update
-    func save() {
+    func saveContext() {
         do {
             try context.save()
         } catch {
@@ -50,7 +50,7 @@ final class CoreDataHelper {
     // Delete
     func deleteTask(_ task: Task) {
         context.delete(task)
-        save()
+        saveContext()
     }
     
 }
