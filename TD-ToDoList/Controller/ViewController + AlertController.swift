@@ -31,14 +31,14 @@ extension UIViewController {
             textField.placeholder = placeHolder
         }
         let add = UIAlertAction(title: "Add", style: .default) { (action) in
-            guard let text = ac.textFields?[0].text?.trimmingCharacters(in: .whitespaces) else {
+            guard let text = ac.textFields?[0].text, !text.trimmingCharacters(in: .whitespaces).isEmpty else {
                 self.showAlert(viewController: viewController, title: "Error", message: "Please enter a text")
                 return
             }
             
             callback?(text)
         }
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancel = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
         
         ac.addAction(add)
         ac.addAction(cancel)

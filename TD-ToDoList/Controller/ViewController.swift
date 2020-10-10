@@ -120,6 +120,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let task = fetchedController?.object(at: indexPath)
+        task?.isDone.toggle()
+        coreDataHelper.saveContext()
+        
+        reloadData()
+    }
+    
     
 }
 
