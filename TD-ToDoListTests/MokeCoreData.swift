@@ -10,7 +10,7 @@ import CoreData
 
 final class MokeCoreData {
     class func createContext() -> NSManagedObjectContext {
-        let managedObjectMode = NSManagedObjectModel.mergedModel(from: nil)!
+        let managedObjectMode = NSManagedObjectModel.mergedModel(from: [Bundle.main])!
         let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectMode)
         do {
             try persistentStoreCoordinator.addPersistentStore(ofType: NSInMemoryStoreType, configurationName: nil, at: nil, options: nil)

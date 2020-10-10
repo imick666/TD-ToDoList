@@ -20,7 +20,7 @@ final class CoreDataHelper {
     
     // Create
     func createTask(title: String) {
-        let newTask = Task()
+        let newTask = Task(context: context)
         newTask.title = title
         newTask.isDone = false
         
