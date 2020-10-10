@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func addTaskButtonTapped(_ sender: Any) {
-        showAlertWithTextField(viewController: self, title: "Add new task", message: nil, placeHolder: "Task") { (text) in
+        showAlertWithTextField(viewController: self, title: "Add new task", message: nil, placeHolder: "Task", holdText: nil) { (text) in
             self.coreDataHelper.createTask(title: text)
             self.reloadData()
         }
@@ -108,16 +108,31 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     // MARK: - TableView Delegate
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if editingStyle == .delete {
-            guard let task = fetchedController?.object(at: indexPath) else {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let edit = UITableViewRowAction(style: .normal, title: "Edit") { (action, indexPath) in
+            guard let task = self.fetchedController?.object(at: indexPath) else {
                 return
             }
-            coreDataHelper.deleteTask(task)
-            
-            reloadData()
+            self.showAlertWithTextField(viewController: self, title: "Edit Task", message: nil, placeHolder: nil, holdText: task.title) { (text) in
+                task.title = text
+                task.isDone = false
+                self.coreDataHelper.saveContext()
+                self.reloadData()
+            }
         }
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            guard let task = self.fetchedController?.object(at: indexPath) else {
+                return
+            }
+            self.coreDataHelper.deleteTask(task)
+            
+            self.reloadData()
+        }
+        
+        
+        
+        return [delete, edit]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

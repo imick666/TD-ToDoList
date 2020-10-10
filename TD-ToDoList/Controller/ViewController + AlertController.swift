@@ -24,11 +24,13 @@ extension UIViewController {
                                 title: String?,
                                 message: String?,
                                 placeHolder: String?,
+                                holdText: String?,
                                 callback: (((_ textfieldText: String) -> Void)?)) {
         
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         ac.addTextField { (textField) in
             textField.placeholder = placeHolder
+            textField.text = holdText
         }
         let add = UIAlertAction(title: "Add", style: .default) { (action) in
             guard let text = ac.textFields?[0].text, !text.trimmingCharacters(in: .whitespaces).isEmpty else {
