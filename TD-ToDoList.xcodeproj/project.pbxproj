@@ -101,12 +101,12 @@
 		E05469622531C6AE00E7353C /* TD-ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				E054699E2531C6C300E7353C /* Controller */,
+				E054699D2531C6BE00E7353C /* View */,
+				E05469992531C6B700E7353C /* Model */,
 				E05469632531C6AE00E7353C /* AppDelegate.swift */,
 				E05469652531C6AE00E7353C /* SceneDelegate.swift */,
-				E05469672531C6AE00E7353C /* ViewController.swift */,
-				E05469692531C6AE00E7353C /* Main.storyboard */,
 				E054696F2531C6AF00E7353C /* Assets.xcassets */,
-				E05469712531C6AF00E7353C /* LaunchScreen.storyboard */,
 				E05469742531C6AF00E7353C /* Info.plist */,
 				E054696C2531C6AE00E7353C /* TD_ToDoList.xcdatamodeld */,
 			);
@@ -129,6 +129,30 @@
 				E054698A2531C6AF00E7353C /* Info.plist */,
 			);
 			path = "TD-ToDoListUITests";
+			sourceTree = "<group>";
+		};
+		E05469992531C6B700E7353C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E054699D2531C6BE00E7353C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E05469692531C6AE00E7353C /* Main.storyboard */,
+				E05469712531C6AF00E7353C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E054699E2531C6C300E7353C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E05469672531C6AE00E7353C /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,7 +394,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
